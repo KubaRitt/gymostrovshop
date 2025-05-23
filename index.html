@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knižní Burza</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-2xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">Přidej svoji starou učebnici</h1>
+    
+    <form name="book-form" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-4 bg-white p-6 rounded shadow">
+      <input type="hidden" name="form-name" value="book-form" />
+
+      <div>
+        <label class="block">Jméno a Příjmení</label>
+        <input type="text" name="name" required class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label class="block">Kontaktní údaje</label>
+        <input type="text" name="contact" required class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label class="block">Stav knihy</label>
+        <select name="condition" required class="w-full border p-2 rounded">
+          <option value="">-- Vyberte stav --</option>
+          <option value="Jako nová">Jako nová</option>
+          <option value="Použitá">Použitá</option>
+          <option value="Poškozená">Poškozená</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block">Fotka knihy</label>
+        <input type="file" name="book-image" required class="w-full" />
+      </div>
+
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Odeslat</button>
+    </form>
+  </div>
+</body>
+</html>
